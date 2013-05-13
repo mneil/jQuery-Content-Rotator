@@ -25,14 +25,14 @@
 
 
 ### Method Detail
-**<a id="rotator" name="rotator"></a>rotator**
+**<a name="rotator"></a>rotator**
 
 Description: Creates a new instance of the rotator plugin
 ````
 $(".slider").rotator();
 ````
 
-**<a id="gonext" name="gonext"></a>goNext**
+**<a name="gonext"></a>goNext**
 
 Description: Sends the rotator to the next child index
 ````
@@ -40,7 +40,7 @@ $(".slider").data('rotator').goNext();
 ````
 goNext also accepts a parameter of 1 or -1. This will cause the rotator to either rotate backwards to the previous child or continue forwards.
 
-**<a id="gotoindex"></a>goToIndex**
+**<a name="gotoindex"></a>goToIndex**
 
 Description: Sends the rotator to the next child index
 ````
@@ -48,7 +48,7 @@ $(".slider").data('rotator').goToIndex(2);
 ````
 The rotator will animate to the child specified. If the child is out of range an error is thrown and the rotator will continue on like normal.
 
-**<a id="onerror"></a>onError**
+**<a name="onerror"></a>onError**
 
 Description: Dispatches an error object relaying the target failure and error message
 ````
@@ -56,7 +56,7 @@ $(".slider").data('rotator').onError = function(e){alert("error in "+e.target)}
 ````
 The error object contains two properties; target and error. The target is where the rotator failed. For example, it may be in the initializing where too few children are present in the slider ( the target would be init) or when goToIndex is called with an index out of range (target is goToIndex). The error is a descriptive error message of the failure.
 
-**<a id="pause"></a>pause**
+**<a name="pause"></a>pause**
 
 Description: Pauses the rotator
 ````
@@ -64,7 +64,7 @@ $(".slider").data('rotator').pause();
 ````
 Clears the interval at which the slider is rotating if auto is true (default).
 
-**<a id="start"></a>start**
+**<a name="start"></a>start**
 
 Description: Starts the rotator
 ````
@@ -74,7 +74,7 @@ Starts the rotator rotating regardless of auto. Can be used to restart a paused 
 
 
 ### Property Detail
-**<a id="arrows"></a>arrows**
+**<a name="arrows"></a>arrows**
 
 Description: The class of the left and right arrow controls with unique number 0 indexed
 ````
@@ -85,7 +85,7 @@ arrows is an object containing class identifiers for the left and right arrow DO
 _Default:_ `{left:".leftArrow"+i,right:".rightArrow"+i}`
 Where i is the 0 based increment of the number of sliders on the page.
 
-**<a id="transpeed"></a>tranSpeed**
+**<a name="transpeed"></a>tranSpeed**
 
 Description: The time a transition should last in milliseconds
 ````
@@ -93,7 +93,7 @@ $(".slider").rotator({tranSpeed:400});
 ````
 _Default:_ 800
 
-**<a id="delay"></a>delay**
+**<a name="delay"></a>delay**
 
 Description: The time a child should display before the transition in milliseconds
 ````
@@ -101,7 +101,7 @@ $(".slider").rotator({delay:10000});
 ````
 _Default:_ 4000
 
-**<a id="auto"></a>auto**
+**<a name="auto"></a>auto**
 
 Description: Sets auto scrolling through rotator. true starts animation automatically. false disables auto rotating
 ````
@@ -109,7 +109,7 @@ $(".slider").rotator({auto:false});
 ````
 _Default:_ true
 
-**<a id="loop"></a>loop**
+**<a name="loop"></a>loop**
 
 Description: Infinite scroll on or off, default true infinitely loops
 ````
@@ -119,7 +119,7 @@ If set to false the slider will scroll back to the 0 index when it has reached t
 
 _Default:_ true
 
-**<a id="backwards"></a>backwards**
+**<a name="backwards"></a>backwards**
 
 Description: Sets the rotator to run backwards. Loop must be set to true to run backwards
 ````
@@ -129,7 +129,7 @@ The rotator will rotate from left to right instead of right to left by default
 
 _Default:_ false
 
-**<a id="onchange"></a>onChange**
+**<a name="onchange"></a>onChange**
 
 Description: onChange event fires when the transition animation begins
 ````
@@ -139,7 +139,7 @@ When the onChange event is fired a parameter is passed containing the new index 
 
 _Default:_ function(){}
 
-**<a id="endchange"></a>endChange**
+**<a name="endchange"></a>endChange**
 
 Description: endChange event fires when the transition animation ends
 ````
