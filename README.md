@@ -25,14 +25,14 @@
 
 
 ### Method Detail
-**<a id="rotator"></a>rotator**
+**<a id="rotator" name="rotator"></a>rotator**
 
 Description: Creates a new instance of the rotator plugin
 ````
 $(".slider").rotator();
 ````
 
-**<a id="gonext" name="#gonext"></a>goNext**
+**<a id="gonext" name="gonext"></a>goNext**
 
 Description: Sends the rotator to the next child index
 ````
