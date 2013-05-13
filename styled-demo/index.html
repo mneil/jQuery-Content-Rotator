@@ -1,0 +1,133 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <link rel="icon" type="image/png" href="Mneil.png">
+  <head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>jQuery Image Rotator</title>
+  
+  <link rel="stylesheet" href="../styles/styled-demo.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+  
+  <script type="text/javascript" charset="utf-8" src="../js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.rotator.min.js"></script>
+  <body>
+    
+    <div id="demo">
+    
+    <div class="slider-content">
+      
+      <a href="" class="leftarrow"></a><a href="" class="rightarrow"></a>
+      
+      <div id="slider-holder">
+        <ul class="slider" style="margin-left: -5401.59px; width: 11616px;">
+          
+          <li class="img1"></li>
+          <li class="img2"></li>
+          <li class="img3"></li>
+          <li class="img5"></li>
+          
+        </ul>
+        <ul id="slider-facts">
+          
+          <li>These are some green mountains</li>
+          <li>And here is a picture of wind turbines on a snowy hillside</li>
+          <li>A bunch of solar panels are powering this place</li>
+          <li>The final image is the side of a building at sunset</li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <div id="demo">
+      
+      <a href="" class="leftarrow"></a><a href="" class="rightarrow"></a>
+      <div class="slider-wrap">
+        <ul class="slider">
+          <ul>
+            <li>
+              <a href=""><img src="../images/chris_farmer_poster_thumb.jpg" alt="" />
+                <div class="name">
+                  Chris Farmer Poster
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href=""><img src="../images/decade_of_blade_catalog.jpg" alt="" />
+                <div class="name">
+                  Decade Of Blade
+                </div>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href=""><img src="../images/fluxar_business_cards_small.jpg" alt="" />
+                <div class="name">
+                  Fluxar Business Cards
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href=""><img src="../images/Kern_Green.jpg" alt="" />
+                <div class="name">
+                  Kern Green
+                </div>
+              </a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+      <div class="curNum">Current Slide: <span>0</span></div>
+      
+      
+    </div> -->
+
+    <script type="text/javascript" charset="utf-8">
+          jQuery(document).ready(function($){
+            
+            
+            
+            $(".slider").rotator({
+              arrows    : {left:".leftarrow",right:".rightarrow"},
+              tranSpeed : 800,
+              delay   : 4000,
+              auto    : true,
+              loop    : true,
+              backwards : false,
+              onChange : homeSliderChange,
+              endChange : function(i){}
+            });
+            
+            
+
+            $("#slider-facts li").each(function(e){
+              if(e!=0){
+                $(this).css({marginLeft:-968});
+              }
+            });
+           
+            function homeSliderChange(i){
+                            
+              $("#slider-facts li.active").animate({marginLeft:-968},400,function(){
+                $("#slider-facts li").removeClass("active");
+                $("#slider-facts li").eq(i).animate({marginLeft:0},400).addClass("active");
+              });
+              
+            }
+            
+            $("#slider-facts li").eq(0).addClass("active");
+              
+          });
+    </script>
+    
+  </body>
+</html>

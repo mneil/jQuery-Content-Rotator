@@ -1,0 +1,169 @@
+html{
+  width:100%;
+  height:100%;
+}
+body{
+  width:100%;
+  height:100%;
+  overflow:auto;
+  margin:0px;
+  padding:0px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+  line-height:16px;
+}
+img{
+  border:none;
+}
+
+#demo{
+  padding:40px;
+  width:700px;
+  margin:0 auto;
+}
+
+.code{
+  display:none;
+  background:#313131;
+  color:#ffffff;
+  padding:20px;
+}
+.code.show{
+  display:block;
+}
+
+p{margin:20px 0;}
+
+/*
+ * Slider Specific Styles
+ */
+ 
+/*
+ * BASIC / GENERAL STYLES
+ */
+.slider-wrap{
+  width:218px;
+  height:166px;
+  overflow:hidden;
+  margin:40px auto;
+}
+
+.slider{
+  margin:0px;
+  padding:0px;
+  height:166px;
+}
+
+.slider li{
+  margin:0px;
+  padding:0px;
+  float:left;
+  width:218px;
+  list-style:none;
+}
+
+.slider-numbers{
+  margin:0;
+  padding:0;
+}
+
+ul.slider-numbers-0, ul.slider-numbers-1{
+  display:none;
+}
+
+
+
+/*
+ * INTERMEDIATE STYLES
+ */
+
+.slider-wrap-3,.slider-wrap-4{height:200px;}
+.slider-3,.slider-4{position:relative;z-index:10;}
+ul.slider-numbers-2 li,ul.slider-numbers-3 li{
+  float:left;
+  position:relative;
+  z-index:50;
+  list-style:none;
+}
+ul.slider-numbers-2 li a, ul.slider-numbers-3 li a{
+  color:#313131;
+  display:block;
+  text-decoration:none;
+  padding:3px 5px;
+}
+
+/*
+ * ADVANCED
+ */
+.slider-5 ul{
+  padding:0px;
+  margin:0px;
+  float:left;
+}
+.slider-5 ul, .slider-wrap-5{
+  width:436px;
+  height:166px;
+}
+.slider-wrap-5{
+  height:200px;
+}
+ul.slider-numbers-5 li{
+  float:left;
+  position:relative;
+  z-index:50;
+  list-style:none;
+}
+ul.slider-numbers-5 li a{
+  color:#313131;
+  display:block;
+  text-decoration:none;
+  padding:3px 5px;
+}
+.leftarrow{
+  margin:10px 0 0 130px;
+}
+.rightarrow{
+  margin:10px 0 0 385px;
+}
+
+
+/*
+ * DOCUMENTATION STYLES
+ */
+
+#docs{
+  padding:25px;
+}
+
+#docs h2{
+  font-size:18px;
+  line-height:18px;
+}
+
+#docs table{font-size:12px;}
+
+#docs th{
+  text-align:left;
+  background:#73bfe8;
+  padding:1px 5px;
+  color:#ffffff;
+  font-size:13px;
+}
+
+#docs td{
+  padding:2px 10px 3px;
+}
+
+#docs td a{
+  color:#313131;
+}
+
+#docs td a:hover{
+  color:#1189c8;
+}
+
+#docs tr.alt{
+  background:#e1f2fb;
+}
+
+#docs .spacer{height:50px;}

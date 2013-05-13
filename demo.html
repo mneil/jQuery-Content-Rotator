@@ -1,0 +1,363 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <link rel="icon" type="image/png" href="Mneil.png">
+  <head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>jQuery Image Rotator</title>
+  
+  <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+  
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/jquery.rotator.min.js"></script>
+  <body>
+    
+    <div id="demo">
+      
+      <h1>General Information</h1>
+      <p>
+        In the following examples all rotators are created using a div (to wrap the rotator and hide overflow), an
+        unordered list (to act as the rotator) and several child list elements to contain our content.
+      </p>
+      <p>
+        However, an unordered list is not required to act as the slider. And, the outer wrapper is not
+        required either. You can replace the ul with another div and target it as the rotator. The rotator simlpy
+        grabs the width of the child elements sets rotates through them no matter what elements they are or how many.
+      </p>
+      <p>
+        It is possible to rotate through more than one child element at a time. Since the rotator is simply grabbing child
+        elements of the container you can use markup like nested lists to display two or more elements at a time and rotate
+        through them.
+      </p>
+      <p>
+        In order for the rotator to properly adjust it's overall width in order to set the elements inline with each other
+        there must not be any padding or margin applied to the children of the slider. ie: in the below examples there is 0
+        padding and 0 margin set on the list (li) elements and the width is explicitly set. Also, the li elements are
+        floated left. This method works well in all modern browsers and back to IE7 (sorry IE6 I haven't tested you).
+      </p>
+      <p>
+        All rotators generate a list of numbers that correspond to the child elements of the rotator. These are
+        hidden easily with css display:none
+      </p>
+      <p>
+        The rotator can also be controlled by left and right (or forward and backward) buttons. Rotator does not
+        generate these arrows for you. However, it will bind a click event to a left and right classed DOM element.
+        Each rotator envoked will bind the events to elements with the classes .leftarrow(n) and .rightarrow(n) where (n)
+        is the index of the rotator created. In that case the third rotator on this page would have the classes .leftarrow2
+        and .rightarrow2 bound. You can also pass in custom classes to be bound if this is too confusing.
+      </p>
+      <p>
+        The rotator does have events and methods not controlled by the options for added extendability. Please read the <a href="docs.html">docs.</a>
+      </p>
+      <p>
+        There a lot of rotators running on this page which may cause them to not transition properly depending on your browser.
+        For the best demo results (if you are having trouble viewing them) copy and paste the demo code for the one you wish 
+        to preview and import the proper javascripts and stylesheets to view.
+      </p>
+      
+      
+      <div id="beginner-wrap">
+      
+        <p>&nbsp;</p>
+        <h1>Beginner</h1>
+        
+        <p>This is the most basic example of the rotator running with no navigation arrows or buttons.</p>
+        <div class="slider-wrap">
+          <ul class="slider slider-1">
+          	<li><a href=""><img src="images/chris_farmer_poster_thumb.jpg" alt="" /></a></li>
+          	<li><a href=""><img src="images/decade_of_blade_catalog.jpg" alt="" /></a></li>
+          	<li><a href=""><img src="images/fluxar_business_cards_small.jpg" alt="" /></a></li>
+          	<li><a href=""><img src="images/Kern_Green.jpg" alt="" /></a></li>
+          	<li><a href=""><img src="images/tim_palmer_music_small.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+        <h3>Code: <small>(click to show)</small></h3>
+        <p>*Notes: All rotators generate a list of numbers that correspond to the child elements of the rotator. These are
+          hidden in this example with css .slider-numbers-0{display:none}
+        </p>
+        <div class="code">
+          
+          &lt;div class="slider-wrap"&gt;<br/>
+            &lt;ul class="slider slider-1"&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/chris_farmer_poster_thumb.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/decade_of_blade_catalog.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/fluxar_business_cards_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/Kern_Green.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/tim_palmer_music_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+          
+          &lt;script type="text/javascript"&gt;<br/>
+          jQuery(document).ready(function($){<br/>
+              <br/>
+              $(".slider-1").rotator();<br/>
+              <br/>
+          });<br/>
+          &lt;/script&gt;
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>This is another basic slider with a few of the options set like transition time, display time and direction</p>
+        <div class="slider-wrap">
+          <ul class="slider slider-2">
+            <li><a href=""><img src="images/chris_farmer_poster_thumb.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/decade_of_blade_catalog.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/fluxar_business_cards_small.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/Kern_Green.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/tim_palmer_music_small.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+        <h3>Code: <small>(click to show)</small></h3>
+        <p>
+          *Notes: All rotators generate a list of numbers that correspond to the child elements of the rotator. These are
+          hidden in this example with css .slider-numbers-0{display:none}
+        </p>
+        <div class="code">
+          
+          &lt;div class="slider-wrap"&gt;<br/>
+            &lt;ul class="slider slider-2"&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/chris_farmer_poster_thumb.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/decade_of_blade_catalog.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/fluxar_business_cards_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/Kern_Green.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/tim_palmer_music_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+          
+          &lt;script type="text/javascript"&gt;<br/>
+          jQuery(document).ready(function($){<br/>
+              <br/>
+              $(".slider-2").rotator({<br/>
+                tranSpeed : 300,<br/>
+                delay: 1000,<br/>
+                backwards: true<br/>
+              });<br/>
+              <br/>
+          });<br/>
+          &lt;/script&gt;
+        </div>
+      
+      </div> <!-- #beginner-wrap -->
+      
+      
+      <div id="intermediate-wrap">
+      
+      
+        <p>&nbsp;</p>
+        <h1>Intermediate</h1>
+       
+        <p>This slider displays a list of clickable numbers to switch images</p>
+        <div class="slider-wrap slider-wrap-3">
+          <ul class="slider slider-3">
+            <li><a href=""><img src="images/chris_farmer_poster_thumb.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/decade_of_blade_catalog.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/fluxar_business_cards_small.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/Kern_Green.jpg" alt="" /></a></li>
+            <li><a href=""><img src="images/tim_palmer_music_small.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+        <h3>Code: <small>(click to show)</small></h3>
+        <p>
+          *Notes: This example is just like the above examples except we've used some css to show the slider-numbers.
+          With some more advanced css we could hide the text and replace the numbers with icons or buttons and float them
+          over the images.
+        </p>
+        <div class="code">
+          
+          &lt;div class="slider-wrap"&gt;<br/>
+            &lt;ul class="slider slider-3"&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/chris_farmer_poster_thumb.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/decade_of_blade_catalog.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/fluxar_business_cards_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/Kern_Green.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/tim_palmer_music_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+          
+          &lt;script type="text/javascript"&gt;<br/>
+          jQuery(document).ready(function($){<br/>
+              <br/>
+              $(".slider-3").rotator({<br/>
+                backwards: true<br/>
+              });<br/>
+              <br/>
+          });<br/>
+          &lt;/script&gt;
+        </div>
+        
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        
+        <p>This slider displays a list of clickable numbers to switch images and more than just images inside the list</p>
+        <div class="slider-wrap slider-wrap-4">
+          <ul class="slider slider-4">
+            <li><a href=""><img src="images/chris_farmer_poster_thumb.jpg" alt="" />Chris Farmer Poster</a></li>
+            <li><a href=""><img src="images/decade_of_blade_catalog.jpg" alt="" />Decade Of Blade Catalog</a></li>
+            <li><a href=""><img src="images/fluxar_business_cards_small.jpg" alt="" />Fluxar Business Cards</a></li>
+            <li><a href=""><img src="images/Kern_Green.jpg" alt="" />Kern Green</a></li>
+            <li><a href=""><img src="images/tim_palmer_music_small.jpg" alt="" />Tim Palmer Music</a></li>
+          </ul>
+        </div>
+        <h3>Code: <small>(click to show)</small></h3>
+        <p>
+          *Notes: All I've done is add text inside of the list element. I chose to wrap it with the anchor, it could be outside as well.
+        </p>
+        <div class="code">
+          
+          &lt;div class="slider-wrap"&gt;<br/>
+            &lt;ul class="slider slider-3"&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/chris_farmer_poster_thumb.jpg" alt="" /&gt;Chris Farmer Poster&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/decade_of_blade_catalog.jpg" alt="" /&gt;Decade Of Blade Catalog&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/fluxar_business_cards_small.jpg" alt="" /&gt;Fluxar Business Cards&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/Kern_Green.jpg" alt="" /&gt;Kern Green&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/tim_palmer_music_small.jpg" alt="" /&gt;Tim Palmer Music&lt;/a&gt;&lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+          
+          &lt;script type="text/javascript"&gt;<br/>
+          jQuery(document).ready(function($){<br/>
+              <br/>
+              $(".slider-4").rotator();<br/>
+              <br/>
+          });<br/>
+          &lt;/script&gt;
+        </div>
+        
+        
+      </div> <!-- #intermediate-wrap -->
+      
+      
+      <div id="advanced-wrap">
+      
+      
+        <p>&nbsp;</p>
+        <h1>Advanced</h1>
+        <a class="leftarrow">Prev</a><a class="rightarrow">Next</a>
+        <div class="slider-wrap slider-wrap-5">
+          <ul class="slider slider-5">
+            <ul>
+              <li><a href=""><img src="images/chris_farmer_poster_thumb.jpg" alt="" /></a></li>
+              <li><a href=""><img src="images/decade_of_blade_catalog.jpg" alt="" /></a></li>
+            </ul>
+            <ul>
+              <li><a href=""><img src="images/fluxar_business_cards_small.jpg" alt="" /></a></li>
+              <li><a href=""><img src="images/Kern_Green.jpg" alt="" /></a></li>
+            </ul>
+          </ul>
+        </div>
+        <div class="curNum">Current Slide: <span>0</span></div>
+        <a class="pause">Pause</a><br/>
+        <a class="restart">Restart</a>
+        <h3>Code: <small>(click to show)</small></h3>
+        <p>
+          *Notes: This slider uses nested lists to display 2 images at a time. Also, with some different markup and css we could
+          display two images at a time but only increment through 1 at a time. I've set all available options of the slider and 
+          used the onChange event to update the current slide number in the box above. Also, I've added left and right classes
+          and set anchors above to move the slider to the left or right.
+        </p>
+        <div class="code">
+          
+          &lt;div class="slider-wrap slider-wrap-5"&gt;<br/>
+            &lt;ul class="slider slider-5"&gt;<br/>
+              &lt;ul&gt;<br/>
+                &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/chris_farmer_poster_thumb.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+                &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/decade_of_blade_catalog.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;/ul&gt;<br/>
+              &lt;ul&gt;<br/>
+                &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/fluxar_business_cards_small.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+                &lt;li&gt;&lt;a href=""&gt;&lt;img src="images/Kern_Green.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+              &lt;/ul&gt;<br/>
+            &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+          
+          &lt;script type="text/javascript"&gt;<br/>
+          jQuery(document).ready(function($){<br/>
+              $(".slider-5").rotator({<br/>
+              arrows    : {left:".leftarrow",right:".rightarrow"},<br/>
+              tranSpeed : 800,<br/>
+              delay   : 4000,<br/>
+              auto    : true,<br/>
+              loop    : true,<br/>
+              backwards : false,<br/>
+              onChange : function(i){$(".curNum span").html(i);},<br/>
+              endChange : function(i){}<br/>
+            });<br/>
+          });<br/>
+          &lt;/script&gt;
+        </div>
+        
+        <p>
+        <a href="styled-demo">View the fully styled (Advanced) demo to see what is possible with the rotator!</a>
+        </p>
+       
+      </div> <!-- #advanced-wrap --> 
+    
+    </div> <!-- #demo -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="text/javascript" charset="utf-8">
+          jQuery(document).ready(function($){
+            
+            $(".slider-1").rotator();
+            $(".slider-2").rotator({
+              tranSpeed : 300,
+              delay: 1000,
+              backwards: true
+            });
+            
+            $(".slider-3").rotator({
+              backwards: true
+            });
+            
+            $(".slider-4").rotator();
+            
+            $(".slider-5").rotator({
+              arrows    : {left:".leftarrow",right:".rightarrow"},
+              tranSpeed : 800,
+              delay   : 4000,
+              auto    : true,
+              loop    : true,
+              backwards : false,
+              onChange : function(i){$(".curNum span").html(i);},
+              endChange : function(i){}
+            });
+            $(".pause").click(function(){
+            	$(".slider-5").data('rotator').pause();
+            });
+            $(".restart").click(function(){
+            	$(".slider-5").data('rotator').start();
+            });
+            
+            
+            
+            
+            /* 
+             * page scripts
+             */
+            
+            $("h3").each(function(i){
+              
+              $(this).click(function(){
+              
+                $(".code").eq(i).toggle("show");
+              
+              });
+              
+            });
+            
+            
+            
+          })
+    </script>
+    
+  </body>
+</html>

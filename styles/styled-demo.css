@@ -1,0 +1,133 @@
+html{
+  width:100%;
+  height:100%;
+}
+body{
+  width:100%;
+  height:100%;
+  overflow:auto;
+  margin:0px;
+  padding:0px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+  line-height:16px;
+}
+img{
+  border:none;
+}
+a{
+  outline:none;
+}
+
+.slider-content{
+  width:1000px;
+  height:359px;
+  margin:0 auto;
+  position:relative;
+  display:block;
+}
+
+#slider-holder{
+  width:968px;
+  height:359px;
+  overflow:hidden;
+  margin:100 auto 0 auto;
+  position:relative;
+}
+
+.slider{
+  margin:0;
+  padding:0;
+  height:359px;
+  position:relative;
+  z-index:10px;
+}
+.slider ul{
+  padding:0;
+  margin:0;
+  float:left;
+}
+.slider li{
+  float:left;
+  list-style:none;
+  width:968px;
+  height:359px;
+}
+
+li.img1{
+  background: url(../images/img1.jpg) no-repeat;
+}
+li.img2{
+  background: url(../images/img2.jpg) no-repeat;
+}
+li.img3{
+  background: url(../images/img3.jpg) no-repeat;
+}
+li.img5{
+  background: url(../images/img5.jpg) no-repeat;
+}
+
+
+.slider-numbers{
+  position:absolute;
+  z-index:50px;
+  top:5px;
+  right:9px;
+  margin:0;
+  padding:0;
+}
+.slider-numbers li{
+  float:left;
+  position:relative;
+  z-index:50;
+  list-style:none;
+}
+.slider-numbers li a{
+  color:#313131;
+  display:block;
+  text-decoration:none;
+  padding:0px 3px;
+  text-indent:-9999px;
+  background:url(../images/numbers_bg-trans.png) no-repeat center top;
+  width:8px;
+  height:8px;
+  display:block;
+}
+.slider-numbers li a.active, .slider-numbers li a:hover{
+  background-position: center bottom;
+}
+
+.leftarrow,.rightarrow{
+  width:15px;
+  height:18px;
+  display:block;
+  cursor:pointer;
+  margin:155px 0 0 0px;
+}
+.leftarrow{
+  float:left;
+  background:url(../images/left_arrows-trans.png) no-repeat;
+}
+.rightarrow{
+  float:right;
+  background:url(../images/right_arrows-trans.png) no-repeat;
+}
+.leftarrow:hover, .rightarrow:hover{
+  background-position:bottom;
+}
+
+#slider-facts{
+  padding:0;
+  margin:0;
+  margin-top:-30px;
+}
+#slider-facts li{
+  position:absolute;
+  list-style:none;
+  background-color:rgba(255,255,255,.7);
+  line-height:20px;
+  font-size:15px;
+  height:20px;
+  padding:5px 25px;
+}
+
